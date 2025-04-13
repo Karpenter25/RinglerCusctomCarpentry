@@ -1,0 +1,193 @@
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" http-equiv="content-type">
+	<style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c2{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c3{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}
+	</style>
+</head>
+<body class="c2 doc-content">
+<p class="c1"><span class="c0">Website page 3</span></p>
+
+<p class="c1"><span class="c0">&lt;!DOCTYPE html&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;html lang=&quot;en&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;head&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;meta charset=&quot;UTF-8&quot; /&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;title&gt;Portfolio | Ringler Custom Carpentry&lt;/title&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;meta name=&quot;description&quot; content=&quot;Browse our portfolio of custom cabinetry, renovations, and outdoor carpentry projects completed by Ringler Custom Carpentry.&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;style&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; .portfolio-grid {</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 1.5rem;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; .portfolio-item {</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; position: relative;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; .portfolio-img {</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; width: 100%;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; height: 220px;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; object-fit: cover;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; transition: transform 0.3s ease;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; .portfolio-item:hover .portfolio-img {</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; transform: scale(1.05);</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; .portfolio-caption {</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; position: absolute;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; bottom: 0;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; width: 100%;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 1rem;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(0, 0, 0, 0.6);</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; color: #fff;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; text-align: center;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;/style&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;/head&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;body&gt;</span></p>
+
+<p class="c1 c3">&nbsp;</p>
+
+<p class="c1"><span class="c0">&lt;!-- Header --&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;header class=&quot;header&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;container header-container&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;logo-text&quot;&gt;Ringler Custom Carpentry&lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul class=&quot;nav-menu&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;index.html&quot; class=&quot;nav-link&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;services.html&quot; class=&quot;nav-link&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;portfolio.html&quot; class=&quot;nav-link active&quot;&gt;Portfolio&lt;/a&gt;&lt;/li&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;contact.html&quot; class=&quot;nav-link&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;/header&gt;</span></p>
+
+<p class="c1 c3">&nbsp;</p>
+
+<p class="c1"><span class="c0">&lt;!-- Portfolio Section --&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;section class=&quot;section&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;container&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2 class=&quot;section-title&quot; style=&quot;text-align:center;&quot;&gt;Project Portfolio&lt;/h2&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;portfolio-grid&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-item&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;https://via.placeholder.com/400x300&quot; alt=&quot;Kitchen Cabinetry&quot; class=&quot;portfolio-img&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-caption&quot;&gt;Custom Kitchen Cabinetry&lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-item&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;https://via.placeholder.com/400x300&quot; alt=&quot;Deck Construction&quot; class=&quot;portfolio-img&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-caption&quot;&gt;Multi-Level Deck Build&lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-item&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;https://via.placeholder.com/400x300&quot; alt=&quot;Home Renovation&quot; class=&quot;portfolio-img&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-caption&quot;&gt;Whole Home Trim Upgrade&lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-item&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;img src=&quot;https://via.placeholder.com/400x300&quot; alt=&quot;Built-ins&quot; class=&quot;portfolio-img&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;portfolio-caption&quot;&gt;Built-in Entertainment Center&lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;/section&gt;</span></p>
+
+<p class="c1 c3">&nbsp;</p>
+
+<p class="c1"><span class="c0">&lt;!-- Footer --&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;footer class=&quot;footer&quot; style=&quot;background-color: #333; color: #fff; padding: 2rem 0; text-align: center;&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;container&quot;&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &nbsp; &lt;p&gt;&amp;copy; 2025 Ringler Custom Carpentry. All rights reserved.&lt;/p&gt;</span></p>
+
+<p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;/footer&gt;</span></p>
+
+<p class="c1 c3">&nbsp;</p>
+
+<p class="c1"><span class="c0">&lt;/body&gt;</span></p>
+
+<p class="c1"><span class="c0">&lt;/html&gt;</span></p>
+
+<p class="c1 c3">&nbsp;</p>
+</body>
+</html>

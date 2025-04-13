@@ -105,6 +105,28 @@
 
 <div>&nbsp; align-items: center;</div>
 
+<div>}<br />
+<br />
+.hero {</div>
+
+<div>&nbsp; height: 100vh;</div>
+
+<div>&nbsp; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(&#39;https://via.placeholder.com/1200x800&#39;);</div>
+
+<div>&nbsp; background-size: cover;</div>
+
+<div>&nbsp; background-position: center;</div>
+
+<div>&nbsp; display: flex;</div>
+
+<div>&nbsp; align-items: center;</div>
+
+<div>&nbsp; justify-content: center;</div>
+
+<div>&nbsp; text-align: center;</div>
+
+<div>&nbsp; color: white;</div>
+
 <div>}</div>
 
 <div>&nbsp;</div>
@@ -219,7 +241,13 @@
 
 <div>}</div>
 
-<div>&nbsp;</div>
+<div>.btn-primary {</div>
+
+<div>&nbsp; background: var(--primary-color);</div>
+
+<div>&nbsp; color: var(--white);</div>
+
+<div>}</div>
 
 <div>input,</div>
 
