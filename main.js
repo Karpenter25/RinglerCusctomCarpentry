@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Smooth Scroll for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
-    for (let link of links) {
+    links.forEach(link => {
         link.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
-    }
+    });
 
-    // Optional: Sticky Header on Scroll
+    // Sticky Header on Scroll
     const header = document.querySelector('.header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Optional: Scroll to Top Button
+    // Scroll to Top Button
     const scrollBtn = document.querySelector('.scroll-top');
     if (scrollBtn) {
         window.addEventListener('scroll', () => {
