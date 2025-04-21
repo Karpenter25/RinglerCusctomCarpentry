@@ -25,18 +25,31 @@
             <h2 class="section-title">Get in Touch</h2>
             <p class="center-text">We’d love to hear about your project. Let us know what you need and we’ll get back to you as soon as possible.</p>
 
-            <form action="https://formsubmit.co/your-secure-endpoint" method="POST" class="contact-form">
-                <input type="hidden" name="_redirect" id="redirect-url">
-                <input type="hidden" name="_subject" value="New Inquiry from Ringler Custom Carpentry">
-
-                <input type="text" name="name" placeholder="Your Name" required class="form-input">
-                <input type="tel" name="phone" placeholder="Your Phone Number" class="form-input">
-                <input type="email" name="email" placeholder="Your Email" required class="form-input-full">
-                <textarea name="message" placeholder="Tell us about your project..." required class="textarea-input"></textarea>
+            <form action="https://formsubmit.co/kevin@traditionalsolutions.net" method="POST">
+                <!-- Redirect to thank you page after submission -->
+                <input type="hidden" id="redirect-url" name="_redirect" value="https://ringler-custom-carpentry.vercel.app/thankyou.html">
                 
-                <button type="submit" class="btn btn-primary btn-full-width">Send Message</button>
+                <!-- Optional email subject -->
+                <input type="hidden" name="_subject" value="New Inquiry from Ringler Custom Carpentry">
+                
+                <!-- Optional: disable CAPTCHA -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Inquiry:</label><br>
+                <textarea id="message" name="message" rows="6" required></textarea><br><br>
+                
+                <button type="submit">Send Message</button>
             </form>
-
+              
             <div class="contact-info">
                 <p><strong>Phone:</strong> <a href="tel:9195865799">(919) 586-5799</a></p>
                 <p><strong>Location:</strong> Willow Spring, NC</p>

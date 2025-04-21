@@ -173,4 +173,59 @@ justify-content: center; /* Centers the content horizontally */
 .card:hover {
     transform: translateY(-5px); /* Slightly lifts the card on hover */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */ 
-    }
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(57, 91, 116, 0.5);
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
