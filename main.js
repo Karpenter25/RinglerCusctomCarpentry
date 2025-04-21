@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (menuBtn && navMenu) {
         menuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            const isActive = navMenu.classList.toggle('active');
+            menuBtn.setAttribute('aria-expanded', isActive);
         });
     }
 
@@ -17,31 +18,50 @@ document.addEventListener("DOMContentLoaded", function () {
             if (target) {
                 e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.warn(`Target element not found for link: ${this.getAttribute('href')}`);
             }
         });
     });
 
-    // Sticky Header on Scroll
+    // Sticky Header and Scroll to Top Button
     const header = document.querySelector('.header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
+    const scrollBtn = document.querySelector('.scroll-top');
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        // Sticky Header
+        if (header) {
+            if (scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-        });
+        }
+
+        // Scroll to Top Button
+        if (scrollBtn) {
+            scrollBtn.style.display = scrollY > 200 ? 'block' : 'none';
+        }
+    };
+
+    if (header || scrollBtn) {
+        window.addEventListener('scroll', debounce(handleScroll, 100));
     }
 
-    // Scroll to Top Button
-    const scrollBtn = document.querySelector('.scroll-top');
     if (scrollBtn) {
-        window.addEventListener('scroll', () => {
-            scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-        });
-
         scrollBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 });
+
+// Debounce Function
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}

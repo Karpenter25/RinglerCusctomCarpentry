@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact | Ringler Custom Carpentry</title>
     <meta name="description" content="Contact Ringler Custom Carpentry for quotes and custom carpentry projects in Willow Spring, NC.">
     <link rel="stylesheet" href="styles.css">
@@ -19,26 +19,52 @@
             </ul>
         </div>
     </header>
+
     <section class="section">
         <div class="container">
-            <h2 class="section-title" style="text-align:center;">Get in Touch</h2>
-            <p style="text-align:center;">We’d love to hear about your project. Let us know what you need and we’ll get back to you as soon as possible.</p>
-            <form style="max-width: 600px; margin: 2rem auto;">
-                <input type="text" placeholder="Your Name" required style="width: 100%; padding: 1rem; margin-bottom: 1rem;">
-                <input type="email" placeholder="Your Email" required style="width: 100%; padding: 1rem; margin-bottom: 1rem;">
-                <textarea placeholder="Tell us about your project..." required style="width: 100%; padding: 1rem; margin-bottom: 1rem;"></textarea>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="center-text">We’d love to hear about your project. Let us know what you need and we’ll get back to you as soon as possible.</p>
+
+            <form action="https://formsubmit.co/kevin@traditionalsolutions.net" method="POST">
+                <!-- Redirect to thank you page after submission -->
+                <input type="hidden" id="redirect-url" name="_redirect" value="https://ringler-custom-carpentry.vercel.app/thankyou.html">
+                
+                <!-- Optional email subject -->
+                <input type="hidden" name="_subject" value="New Inquiry from Ringler Custom Carpentry">
+                
+                <!-- Optional: disable CAPTCHA -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Inquiry:</label><br>
+                <textarea id="message" name="message" rows="6" required></textarea><br><br>
+                
+                <button type="submit">Send Message</button>
             </form>
-            <div style="text-align:center; margin-top: 2rem;">
+              
+            <div class="contact-info">
                 <p><strong>Phone:</strong> <a href="tel:9195865799">(919) 586-5799</a></p>
                 <p><strong>Location:</strong> Willow Spring, NC</p>
             </div>
         </div>
     </section>
-    <footer class="footer" style="background-color: #333; color: #fff; padding: 2rem 0; text-align: center;">
+
+    <footer class="footer footer-styled">
         <div class="container">
             <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        // Dynamically set the redirect URL
+        document.getElementById('redirect-url').value = "https://ringler-custom-carpentry.vercel.app/thankyou.html";
+    </script>
 </body>
 </html>
