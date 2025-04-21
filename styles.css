@@ -5,11 +5,14 @@
     --dark-color: #333;
     --white: #FFF;
     --transition: all 0.3s ease;
+    /* Applies to all properties for smooth transitions */
+    --box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
     --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --container-max-width: 1200px;
+    --border-radius: 6px; /* Standardized border radius */
 }
 
-/* Universal Styles */
-* {
+body, h1, h2, h3, p, ul, ol {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,11 +31,23 @@ a {
     text-decoration: none;
     color: var(--primary-color);
     transition: var(--transition);
+}.section {
+    background: linear-gradient(135deg, var(--light-color), var(--secondary-color));
 }
-
+.btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}.btn:hover {
+    transform: scale(1.05); /* Slightly enlarges the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a hover shadow */
+}
 a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
+}
+
+.nav-link:hover {
+    color: var(--primary-color); /* Overrides general link hover color */
+    text-decoration: none; /* Ensures no underline for nav links */
 }
 
 /* Hero Section */
@@ -42,9 +57,11 @@ a:hover {
     padding: 80px 20px;
     text-align: center;
     box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius); /* Added border radius */
+    background-image: url('images/shop-2012.jpg');
 }
-
 .hero-title {
+    /* Large font size to emphasize the main title and grab user attention */
     font-size: 3rem;
     margin-bottom: 0.5em;
 }
@@ -77,12 +94,15 @@ a:hover {
     text-align: center;
     font-size: 0.9rem;
     color: var(--dark-color);
-    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius); /* Added border radius */
 }
-
-/* Navigation */
+/* The 'gap' property is supported in modern browsers (e.g., Chrome 84+, Firefox 63+, Edge 84+, Safari 14+). */
+.nav-menu {
 .nav-menu {
     list-style: none;
+    display: flex;
+    gap: 20px;
+}
     display: flex;
     gap: 20px;
 }
@@ -107,7 +127,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
 }
 
@@ -119,11 +139,38 @@ a:hover {
 
 /* Section */
 .section {
-    padding: 60px 20px;
+    padding: 20px 0;
+    text-align: center; /* Centers text content within the section */
+    background: var(--light-color); /* Adds a light background for visual separation */
+    border-top: 1px solid var(--secondary-color); /* Optional: Adds a subtle border at the top */
+    border-bottom: 1px solid var(--secondary-color); /* Optional: Adds a subtle border at the bottom */
 }
-
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
+padding: 0 20px;
+justify-content: center; /* Centers the content horizontally */
     padding: 0 20px;
+justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    display: flex;
+    flex-direction: column; /* Stacks child elements vertically */
+    gap: 20px; /* Adds space between child elements */
+    padding: 20px; /* Adds padding around the container */
+    box-shadow: var(--box-shadow); /* Adds a shadow effect for depth */
+    border-radius: var(--border-radius); /* Rounded corners for a softer look */
+} /* Closing brace for .container */
+/* Card */
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius); /* Added border radius */
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    max-width: 300px; /* Sets a maximum width for the card */
+    margin: 0 auto; /* Centers the card within its container */
 }
+.card:hover {
+    transform: translateY(-5px); /* Slightly lifts the card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */ 
+    }

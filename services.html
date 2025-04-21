@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Ringler Custom Carpentry</title>
     <meta name="description" content="Explore the full range of custom carpentry services offered by Ringler Custom Carpentry in Willow Spring, NC.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/path/to/styles.css">
 </head>
 <body>
     <header class="header">
@@ -13,47 +13,50 @@
             <div class="logo-text">Ringler Custom Carpentry</div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </header>
-    <section class="section" style="padding: 4rem 0; background-color: #f5f5f5;">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title" style="text-align:center;">Our Custom Carpentry Services</h2>
-            <div class="services-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <h2 class="section-title">Our Custom Carpentry Services</h2>
+            <div class="services-container">
                 <div class="service-card">
                     <h3>Property Turnover</h3>
                     <ul>
-                        <li>Punch list repairs</li>
-                        <li>Trim installation</li>
-                        <li>Paint touch-ups</li>
-                        <li>Rental-ready upgrades</li>
+                        <li>Punch list repairs - Addressing minor fixes and finishing touches to prepare properties for turnover.</li>
+                        <li>Trim installation - Installing baseboards, crown molding, and other decorative trims for a polished look.</li>
+                        <li>Paint touch-ups - Correcting paint imperfections to ensure a flawless finish.</li>
+                        <li>Rental-ready upgrades - Making necessary updates to ensure properties are ready for new tenants.</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <h3>Custom Cabinetry</h3>
                     <ul>
-                        <li>Kitchen cabinets and islands</li>
-                        <li>Bathroom vanities</li>
-                        <li>Built-ins and office storage</li>
+                        <li>Kitchen cabinets and islands - Custom-designed cabinetry tailored to your kitchen layout.</li>
+                        <li>Bathroom vanities - Elegant and functional vanities to enhance your bathroom space.</li>
+                        <li>Built-ins and office storage - Personalized storage solutions for your home or office.</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <h3>Home Renovations</h3>
                     <ul>
-                        <li>Interior trim and molding</li>
-                        <li>Doors, windows, and framing</li>
-                        <li>Kitchen/bath updates</li>
+                        <li>Interior trim and molding - Enhancing the aesthetic appeal of your home with expertly crafted trims and moldings.</li>
+                        <li>Doors, windows, and framing - Installing and repairing doors, windows, and structural framing for improved functionality and style.</li>
+                        <li>Kitchen/bath updates - Modernizing kitchens and bathrooms with custom designs and high-quality finishes.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="footer" style="background-color: #333; color: #fff; padding: 2rem 0; text-align: center;">
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
+            <p>&copy; <span id="currentYear"></span> Ringler Custom Carpentry. All rights reserved.</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
         </div>
     </footer>
 </body>
