@@ -38,43 +38,56 @@
             text-align: center;
         }
     </style>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="container header-container">
             <div class="logo-text">Ringler Custom Carpentry</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link" aria-label="Home">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link" aria-label="Services">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active" aria-label="Portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" aria-label="Contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title" style="text-align:center;">Project Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Kitchen Cabinetry" class="portfolio-img">
-                    <div class="portfolio-caption">Custom Kitchen Cabinetry</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Deck Construction" class="portfolio-img">
-                    <div class="portfolio-caption">Multi-Level Deck Build</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Home Renovation" class="portfolio-img">
-                    <div class="portfolio-caption">Whole Home Trim Upgrade</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Built-ins" class="portfolio-img">
-                    <div class="portfolio-caption">Built-in Entertainment Center</div>
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title" style="text-align:center;">Project Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="images/kitchen-cabinetry.jpg" alt="Custom Kitchen Cabinetry" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
+                        <div class="portfolio-caption">Custom Kitchen Cabinetry</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/deck-construction.jpg" alt="Multi-Level Deck Build" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
+                        <div class="portfolio-caption">Multi-Level Deck Build</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/home-renovation.jpg" alt="Whole Home Trim Upgrade" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
+                        <div class="portfolio-caption">Whole Home Trim Upgrade</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/built-ins.jpg" alt="Built-in Entertainment Center" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
+                        <div class="portfolio-caption">Built-in Entertainment Center</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/siding-repair.jpg" alt="Siding Repair" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
+                        <div class="portfolio-caption">Siding Repair</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/outdoor-living.jpg" alt="Outdoor Living Space" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
+                        <div class="portfolio-caption">Outdoor Living Space</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer class="footer" style="background-color: #333; color: #fff; padding: 2rem 0; text-align: center;">
+        </section>
+    </main>
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
         </div>
