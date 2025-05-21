@@ -1,81 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contact | Ringler Custom Carpentry</title>
-    <meta name="description" content="Contact Ringler Custom Carpentry for quotes and custom carpentry projects in Willow Spring, NC.">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Ringler Custom Carpentry - Request a Quote</title>
+  <meta name="description" content="Contact Ringler Custom Carpentry for custom woodworking and carpentry quotes in Willow Spring, NC. Get in touch for cabinetry, renovations, and outdoor projects.">
+  <meta name="author" content="Kevin Ringler">
+
+  <meta property="og:title" content="Contact Ringler Custom Carpentry - Custom Woodworking & Carpentry Quotes">
+  <meta property="og:description" content="Contact Ringler Custom Carpentry for custom woodworking and carpentry quotes in Willow Spring, NC. Get in touch for cabinetry, renovations, and outdoor projects.">
+  <meta property="og:image" content="images/og-contact.jpg"> <meta property="og:url" content="https://ringlercustomcarpentry.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(w,document,'script','dataLayer','GTM-5FBF39S7');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+  <script src="https://vercel.com/analytics/script.js" defer></script>
 </head>
-<<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FBF39S7');</script>
-<!-- End Google Tag Manager -->
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo-text">Ringler Custom Carpentry</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FBF39S7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-logo-text" role="banner">Ringler Custom Carpentry</div>
+      <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+      <nav aria-label="Main Navigation" id="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="center-text">We’d love to hear about your project. Let us know what you need and we’ll get back to you as soon as possible.</p>
+  <main>
+    <section class="section contact-section">
+      <div class="container">
+        <h1 class="section-title text-center">Get in Touch</h1> <p class="text-center section-intro">We'd love to hear about your project! Please fill out the form below, and we'll get back to you as soon as possible to discuss your custom carpentry needs.</p>
 
-            <form action="https://formsubmit.co/kevin@traditionalsolutions.net" method="POST">
-                <!-- Redirect to thank you page after submission -->
-                <input type="hidden" id="redirect-url" name="_redirect" value="https://ringler-custom-carpentry.vercel.app/thankyou.html">
-                
-                <!-- Optional email subject -->
-                <input type="hidden" name="_subject" value="New Inquiry from Ringler Custom Carpentry">
-                
-                <!-- Optional: disable CAPTCHA -->
-                <!-- <input type="hidden" name="_captcha" value="false"> -->
-                
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">Inquiry:</label><br>
-                <textarea id="message" name="message" rows="6" required></textarea><br><br>
-                
-                <button type="submit">Send Message</button>
-            </form>
-              
-            <div class="contact-info">
-                <p><strong>Phone:</strong> <a href="tel:9195865799">(919) 586-5799</a></p>
-                <p><strong>Email:</strong> 
-                    <a href="mailto:kevin@ringlercustomcarpentry">kevin@ringlercustomcarpentry</a>, 
-                    <a href="mailto:info@ringlercustomcarpentry">info@ringlercustomcarpentry</a>
-                </p>
-                <p><strong>Location:</strong> Willow Spring, NC</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer footer-styled">
-        <div class="container">
-            <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        // Dynamically set the redirect URL
-        document.getElementById('redirect-url').value = "https://ringler-custom-carpentry.vercel.app/thankyou.html";
-    </script>
-</body>
-</html>
+        <div class="contact-content-wrapper">
+            <form action="https://formsubmit.co/kevin@traditionalsolutions.net" method="POST" class="contact-form">
