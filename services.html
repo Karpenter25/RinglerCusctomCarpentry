@@ -9,7 +9,8 @@
 
   <meta property="og:title" content="Ringler Custom Carpentry Services - Comprehensive Woodworking Solutions">
   <meta property="og:description" content="Explore the full range of custom carpentry services offered by Ringler Custom Carpentry in Willow Spring, NC, including property turnover, custom cabinetry, and home renovations.">
-  <meta property="og:image" content="images/og-services.jpg"> <meta property="og:url" content="https://ringlercustomcarpentry.com/services.html">
+  <meta property="og:image" content="images/og-services.jpg">
+  <meta property="og:url" content="https://ringlercustomcarpentry.com/services.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
 
@@ -22,7 +23,7 @@
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(w,document,'script','dataLayer','GTM-5FBF39S7');</script>
+  })(window,document,'script','dataLayer','GTM-5FBF39S7');</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
 
   <script src="https://vercel.com/analytics/script.js" defer></script>
@@ -51,7 +52,8 @@
   <main>
     <section class="section">
       <div class="container">
-        <h1 class="section-title text-center">Our Custom Carpentry Services</h1> <p class="text-center section-intro">At Ringler Custom Carpentry, we offer a diverse range of woodworking and carpentry services to enhance your home or property. Our commitment to quality craftsmanship ensures every project is completed to the highest standards.</p>
+        <h1 class="section-title text-center">Our Custom Carpentry Services</h1>
+        <p class="text-center section-intro">At Ringler Custom Carpentry, we offer a diverse range of woodworking and carpentry services to enhance your home or property. Our commitment to quality craftsmanship ensures every project is completed to the highest standards.</p>
         <div class="services-container">
           <div class="service-card">
             <h3>Property Turnover</h3>
@@ -79,7 +81,8 @@
             </ul>
           </div>
           <div class="service-card">
-            <h3>Outdoor Living Spaces</h3> <ul aria-label="Outdoor Living Space Services">
+            <h3>Outdoor Living Spaces</h3>
+            <ul aria-label="Outdoor Living Space Services">
               <li>**Deck construction:** Building custom decks for relaxation and entertainment.</li>
               <li>**Pergolas and gazebos:** Crafting elegant shade structures for your outdoor areas.</li>
               <li>**Fencing and gates:** Installing and repairing fences for privacy and aesthetics.</li>
@@ -96,24 +99,9 @@
     <div class="container footer-content">
       <p>&copy; <span id="copyright-year"></span> Ringler Custom Carpentry. All rights reserved.</p>
       <p>Willow Spring, NC | (919) 586-5799</p>
-      </div>
+    </div>
   </footer>
 
-  <script>
-    // Dynamically update copyright year
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-    // Basic JavaScript for a mobile navigation toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mainNavigation = document.getElementById('main-navigation');
-
-    if (menuToggle && mainNavigation) {
-      menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        mainNavigation.classList.toggle('active');
-      });
-    }
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>
