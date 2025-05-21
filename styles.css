@@ -410,59 +410,289 @@ p {
 }
 
 /* --- Services Page Specific Styles --- */
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem; /* More space between cards */
-    margin-top: 3rem;
-    text-align: left; /* Align text within cards */
+/* --- Services Page Hero --- */
+.hero-services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/services-hero-bg.jpg'); /* Replace with a services-specific hero image */
+    background-size: cover;
+    background-position: center;
+    min-height: 450px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.service-card {
+.hero-services .hero-title {
+    font-size: 3.8rem; /* Even larger title */
+    margin-bottom: 0.8em;
+}
+
+.hero-services .hero-tagline {
+    font-size: 2rem;
+    margin-bottom: 2.5em;
+}
+
+/* --- Service Showcase Section --- */
+.service-showcase {
+    padding: 80px 0; /* More padding for this main section */
     background-color: var(--white);
+}
+
+/* Service Modules */
+.service-module {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    margin-bottom: 5rem; /* Space between modules */
+    background-color: var(--light-color); /* Light background for modules */
     border-radius: var(--border-radius);
+    overflow: hidden; /* Important for image border-radius */
     box-shadow: var(--box-shadow-medium);
-    padding: 2rem;
     transition: var(--transition);
-    border-left: 5px solid var(--primary-color); /* Accent border */
 }
 
-.service-card:hover {
-    transform: translateY(-8px); /* More pronounced lift */
+.service-module:hover {
     box-shadow: var(--box-shadow-dark);
-    border-left-color: var(--accent-color); /* Change border color on hover */
+    transform: translateY(-5px);
 }
 
-.service-card h3 {
+.service-image-wrapper {
+    flex: 1 1 45%; /* Image takes 45% width, can grow/shrink */
+    min-width: 300px; /* Minimum width for image wrapper */
+    height: 400px; /* Fixed height for consistent image size */
+    overflow: hidden;
+}
+
+.service-module-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers area without distortion */
+    display: block;
+    transition: transform 0.4s var(--transition-ease);
+}
+
+.service-module:hover .service-module-img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.service-content {
+    flex: 1 1 50%; /* Content takes 50% width */
+    padding: 3rem; /* Padding inside content box */
+    text-align: left;
+    min-width: 300px; /* Minimum width for content */
+}
+
+.service-content h3 {
+    font-size: 2.5rem; /* Larger service titles */
+    margin-bottom: 1.5rem;
     color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    font-size: 1.9rem;
 }
 
-.service-card ul {
+.service-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.service-content ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 2rem; /* Space below list */
 }
 
-.service-card ul li {
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
-    color: var(--dark-color);
-    position: relative;
-    padding-left: 1.8rem; /* Space for icon */
+.service-content ul li {
     font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-color);
+    display: flex; /* For icon alignment */
+    align-items: center;
 }
 
-.service-card ul li::before {
-    content: "\f00c"; /* Font Awesome checkmark icon */
-    font-family: "Font Awesome 5 Free"; /* Ensure this font-family is loaded */
-    font-weight: 900; /* For solid icon style */
-    color: var(--accent-color); /* Using accent color for checkmark */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.1em;
+.service-content ul li i.fa-check-circle {
+    color: var(--accent-color); /* Checkmark color */
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em;
+}
+
+/* Alternating Layout for Service Modules */
+.service-module.right-image .service-image-wrapper {
+    order: 1; /* Puts image on the right */
+}
+
+.service-module.right-image .service-content {
+    order: 0; /* Puts content on the left */
+}
+
+/* --- Why Choose Us / Process Grid --- */
+.section-alt-background {
+    background-color: var(--light-color); /* Light background for this section */
+    padding: 80px 0;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.process-step {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    transition: var(--transition);
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.process-step .icon-large {
+    font-size: 3.5rem; /* Large icon size */
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.process-step h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.process-step p {
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+/* --- Final Call to Action Section --- */
+.final-cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 100px 0; /* Generous padding */
+}
+
+.final-cta-section .cta-title {
+    color: var(--white); /* White title on dark background */
+    font-size: 3.2rem;
+}
+
+.final-cta-section .cta-title::after {
+    background-color: var(--accent-color); /* Accent color for underline */
+}
+
+.final-cta-section .cta-intro {
+    color: var(--white);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+/* --- Responsive Adjustments for Services Page --- */
+@media (max-width: 992px) {
+    .service-module {
+        flex-direction: column; /* Stack image and content vertically */
+        text-align: center; /* Center text within modules */
+        margin-bottom: 3rem;
+    }
+    .service-module .service-image-wrapper {
+        flex: 1 1 100%;
+        min-width: unset;
+        height: 300px; /* Adjust image height for smaller screens */
+    }
+    .service-module .service-content {
+        flex: 1 1 100%;
+        padding: 2rem;
+        min-width: unset;
+    }
+    .service-module.right-image .service-image-wrapper,
+    .service-module.right-image .service-content {
+        order: unset; /* Reset order for stacking */
+    }
+    .service-content ul {
+        text-align: left; /* Keep list left-aligned */
+        padding-left: 0;
+    }
+    .service-content ul li {
+        justify-content: flex-start; /* Ensure items start from left */
+    }
+    .process-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    .hero-services {
+        min-height: 350px;
+    }
+    .hero-services .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-services .hero-tagline {
+        font-size: 1.6rem;
+    }
+    .final-cta-section {
+        padding: 60px 0;
+    }
+    .final-cta-section .cta-title {
+        font-size: 2.5rem;
+    }
+    .final-cta-section .cta-intro {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-showcase {
+        padding: 50px 0;
+    }
+    .service-content h3 {
+        font-size: 2rem;
+    }
+    .service-content p {
+        font-size: 1rem;
+    }
+    .process-grid {
+        grid-template-columns: 1fr; /* Stack process steps on smaller phones */
+        gap: 1.5rem;
+    }
+    .hero-services {
+        min-height: 300px;
+        padding: 50px 15px;
+    }
+    .hero-services .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-services .hero-tagline {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-services .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-services .hero-tagline {
+        font-size: 1.1rem;
+    }
+    .service-image-wrapper {
+        height: 250px; /* Smaller image height for very small screens */
+    }
+    .service-content {
+        padding: 1.5rem;
+    }
+    .service-content h3 {
+        font-size: 1.8rem;
+    }
+    .process-step {
+        padding: 2rem 1.5rem;
+    }
+    .final-cta-section .cta-title {
+        font-size: 2rem;
+    }
+}
 }
 
 /* --- Contact Page Specific Styles --- */
