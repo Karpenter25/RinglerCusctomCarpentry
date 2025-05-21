@@ -1,104 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ringler Custom Carpentry</title>
-    <meta name="description" content="Browse our portfolio of custom cabinetry, renovations, and outdoor carpentry projects completed by Ringler Custom Carpentry in Willow Spring, NC.">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .portfolio-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .portfolio-item:hover .portfolio-img {
-            transform: scale(1.05);
-        }
-        .portfolio-caption {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            font-weight: 600;
-            text-align: center;
-        }
-    </style>
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Ringler Custom Carpentry - Custom Woodworking & Carpentry Projects</title>
+  <meta name="description" content="Explore the project portfolio of Ringler Custom Carpentry. See our custom cabinetry, home renovations, outdoor living spaces, and more in Willow Spring, NC.">
+  <meta name="author" content="Kevin Ringler">
+
+  <meta property="og:title" content="Ringler Custom Carpentry Portfolio - Custom Woodworking & Carpentry Projects">
+  <meta property="og:description" content="Explore the project portfolio of Ringler Custom Carpentry. See our custom cabinetry, home renovations, outdoor living spaces, and more in Willow Spring, NC.">
+  <meta property="og:image" content="images/og-portfolio.jpg"> <meta property="og:url" content="https://ringlercustomcarpentry.com/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Inlined styles moved here for clarity, but consider moving to styles.css if possible */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly adjusted minmax */
+        gap: 1.5rem;
+    }
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        cursor: pointer; /* Indicate it's clickable */
+    }
+    .portfolio-img {
+        width: 100%;
+        height: 250px; /* Slightly increased height for better visual */
+        object-fit: cover;
+        transition: transform 0.3s ease, filter 0.3s ease; /* Add filter transition for hover */
+    }
+    .portfolio-item:hover .portfolio-img {
+        transform: scale(1.05);
+        filter: brightness(0.8); /* Slightly darken on hover */
+    }
+    .portfolio-caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        transition: background 0.3s ease; /* Smooth transition for caption background */
+    }
+    /* Lightbox Styles (will need more for full functionality in CSS) */
+    .lightbox {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out; /* Indicate it's clickable to close */
+    }
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      display: block; /* Ensure it's treated as a block element */
+    }
+    .lightbox-caption {
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1.2rem;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(w,document,'script','dataLayer','GTM-5FBF39S7');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+  <script src="https://vercel.com/analytics/script.js" defer></script>
+
 </head>
-<<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FBF39S7');</script>
-<!-- End Google Tag Manager -->
-</script>
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo-text">Ringler Custom Carpentry</div>
-            <nav aria-label="Main Navigation">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link" aria-label="Home">Home</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link" aria-label="Services">Services</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link active" aria-label="Portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link" aria-label="Contact">Contact</a></li>
-                </ul>
-            </nav>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FBF39S7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-logo-text" role="banner">Ringler Custom Carpentry</div>
+      <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+      <nav aria-label="Main Navigation" id="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link active" aria-current="page">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title" style="text-align:center;">Our Project Portfolio</h1> <p class="text-center">Explore a selection of our custom woodworking and carpentry projects, showcasing our craftsmanship in Willow Spring, NC.</p>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-full-img="images/kitchen-cabinetry-full.jpg" data-caption="Stunning Custom Kitchen Cabinetry">
+              <img src="images/kitchen-cabinetry.jpg" alt="Beautifully crafted custom kitchen cabinets in a modern home." class="portfolio-img" loading="lazy" onerror="this.src='images/fallback.jpg';">
+              <div class="portfolio-caption">Custom Kitchen Cabinetry</div>
+          </div>
+          <div class="portfolio-item" data-full-img="images/deck-construction-full.jpg" data-caption="Expansive Multi-Level Deck with Seating">
+              <img src="images/deck-construction.jpg" alt="Large multi-level wooden deck with integrated seating, overlooking a backyard." class="portfolio-img" loading="lazy" onerror="this.src='images/fallback.jpg';">
+              <div class="portfolio-caption">Multi-Level Deck Build</div>
+          </div>
+          <div class="portfolio-item" data-full-img="images/home-renovation-full.jpg" data-caption="Elegant Whole Home Trim Upgrade">
+              <img src="images/home-renovation.jpg" alt="Interior view of a renovated home featuring new baseboards and crown molding." class="portfolio-img" loading="lazy" onerror="this.src='images/fallback.jpg';">
+              <div class="portfolio-caption">Whole Home Trim Upgrade</div>
+          </div>
+          <div class="portfolio-item" data-full-img="images/built-ins-full.jpg" data-caption="Custom Built-in Entertainment Center with Shelving">
+              <img src="images/built-ins.jpg" alt="Custom built-in entertainment center with integrated shelving and storage." class="portfolio-img" loading="lazy" onerror="this.src='images/fallback.jpg';">
+              <div class="portfolio-caption">Built-in Entertainment Center</div>
+          </div>
+          <div class="portfolio-item" data-full-img="images/siding-repair-full.jpg" data-caption="Professional Siding Repair on a Residential Property">
+              <img src="images/siding-repair.jpg" alt="Close-up of newly repaired wooden siding on a house exterior." class="portfolio-img" loading="lazy" onerror="this.src='images/fallback.jpg';">
+              <div class="portfolio-caption">Siding Repair</div>
+          </div>
+          <div class="portfolio-item" data-full-img="images/outdoor-living-full.jpg" data-caption="Inviting Outdoor Living Space with Pergola">
+              <img src="images/outdoor-living.jpg" alt="Spacious outdoor living area with a wooden pergola, patio furniture, and landscaping." class="portfolio-img" loading="lazy" onerror="this.src='images/fallback.jpg';">
+              <div class="portfolio-caption">Outdoor Living Space</div>
+          </div>
         </div>
-    </header>
-    <main>
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title" style="text-align:center;">Project Portfolio</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="images/kitchen-cabinetry.jpg" alt="Custom Kitchen Cabinetry" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
-                        <div class="portfolio-caption">Custom Kitchen Cabinetry</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/deck-construction.jpg" alt="Multi-Level Deck Build" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
-                        <div class="portfolio-caption">Multi-Level Deck Build</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/home-renovation.jpg" alt="Whole Home Trim Upgrade" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
-                        <div class="portfolio-caption">Whole Home Trim Upgrade</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/built-ins.jpg" alt="Built-in Entertainment Center" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
-                        <div class="portfolio-caption">Built-in Entertainment Center</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/siding-repair.jpg" alt="Siding Repair" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
-                        <div class="portfolio-caption">Siding Repair</div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="images/outdoor-living.jpg" alt="Outdoor Living Space" class="portfolio-img" onerror="this.src='images/fallback.jpg';">
-                        <div class="portfolio-caption">Outdoor Living Space</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
-        </div>
-    </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="copyright-year"></span> Ringler Custom Carpentry. All rights reserved.</p>
+      <p>Willow Spring, NC | (919) 586-5799</p>
+      </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <span class="close-btn" aria-label="Close image viewer">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <script>
+    // Dynamically update copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Basic JavaScript for a mobile navigation toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNavigation = document.getElementById('main-navigation');
+
+    if (menuToggle && mainNavigation) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        mainNavigation.classList.toggle('active');
+      });
+    }
+
+    // Lightbox functionality (basic example)
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.close-btn');
+
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const fullImgSrc = item.getAttribute('data-full-img');
+        const captionText = item.getAttribute('data-caption');
+
+        lightboxImg.src = fullImgSrc;
+        lightboxImg.alt = captionText; // Set alt for accessibility in lightbox
+        lightboxCaption.textContent = captionText;
+        lightbox.style.display = 'flex'; // Use flex to center content
+      });
+    });
+
+    // Close lightbox when close button clicked or outside image clicked
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) { // Only close if clicked directly on the overlay, not the image
+        lightbox.style.display = 'none';
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+        lightbox.style.display = 'none';
+      }
+    });
+
+  </script>
 </body>
 </html>
