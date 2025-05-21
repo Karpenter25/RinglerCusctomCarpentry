@@ -1,56 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Ringler Custom Carpentry - Request a Quote</title>
-  <meta name="description" content="Contact Ringler Custom Carpentry for custom woodworking and carpentry quotes in Willow Spring, NC. Get in touch for cabinetry, renovations, and outdoor projects.">
-  <meta name="author" content="Kevin Ringler">
+<<form action="https://formsubmit.co/Kevin@RinglerCustomCarpentry.com" method="POST" class="contact-form">
+                <input type="hidden" name="_next" value="https://ringlercustomcarpentry.com/thankyou.html">
 
-  <meta property="og:title" content="Contact Ringler Custom Carpentry - Custom Woodworking & Carpentry Quotes">
-  <meta property="og:description" content="Contact Ringler Custom Carpentry for custom woodworking and carpentry quotes in Willow Spring, NC. Get in touch for cabinetry, renovations, and outdoor projects.">
-  <meta property="og:image" content="images/og-contact.jpg"> <meta property="og:url" content="https://ringlercustomcarpentry.com/contact.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
+                <input type="text" name="_honeypot" style="display:none">
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+                <input type="hidden" name="_captcha" value="false">
 
-  <link rel="stylesheet" href="styles.css">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(w,document,'script','dataLayer','GTM-5FBF39S7');</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-  <script src="https://vercel.com/analytics/script.js" defer></script>
-</head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FBF39S7"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <header class="header">
-    <div class="container header-container">
-      <div class="header-logo-text" role="banner">Ringler Custom Carpentry</div>
-      <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fas fa-bars"></span>
-      </button>
-      <nav aria-label="Main Navigation" id="main-navigation">
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
 
-  <main>
-    <section class="section contact-section">
-      <div class="container">
-        <h1 class="section-title text-center">Get in Touch</h1> <p class="text-center section-intro">We'd love to hear about your project! Please fill out the form below, and we'll get back to you as soon as possible to discuss your custom carpentry needs.</p>
+                <div class="form-group">
+                    <label for="project-type">Type of Project:</label>
+                    <select id="project-type" name="project_type" required>
+                        <option value="">--Please select an option--</option>
+                        <option value="Cabinetry">Cabinetry</option>
+                        <option value="Renovation">Renovation</option>
+                        <option value="Outdoor Project">Outdoor Project</option>
+                        <option value="Custom Furniture">Custom Furniture</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
 
-        <div class="contact-content-wrapper">
-            <form action="https://formsubmit.co/kevin@traditionalsolutions.net" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="message">Project Description:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us more about your project ideas, dimensions, materials, or any specific requirements." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  </body>
+</html>
