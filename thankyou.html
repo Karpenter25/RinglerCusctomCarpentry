@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Thank You | Ringler Custom Carpentry</title>
-    <meta name="description" content="Thank you for contacting Ringler Custom Carpentry. We'll be in touch soon.">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Ringler Custom Carpentry - Message Received</title>
+  <meta name="description" content="Thank you for contacting Ringler Custom Carpentry. Your message has been successfully sent, and we'll be in touch soon.">
+  <meta name="author" content="Kevin Ringler">
+
+  <meta property="og:title" content="Thank You | Ringler Custom Carpentry">
+  <meta property="og:description" content="Thank you for contacting Ringler Custom Carpentry. Your message has been successfully sent, and we'll be in touch soon.">
+  <meta property="og:image" content="images/og-thankyou.jpg"> <meta property="og:url" content="https://ringlercustomcarpentry.com/thankyou.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5FBF39S7');</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+  <script src="https://vercel.com/analytics/script.js" defer></script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGWMS3S68H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MGWMS3S68H');
-</script>
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo-text">Ringler Custom Carpentry</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FBF39S7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header class="header">
+    <div class="container header-container">
+      <div class="header-logo-text" role="banner">Ringler Custom Carpentry</div>
+      <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+      <nav aria-label="Main Navigation" id="main-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main>
     <section class="section">
-        <div class="container" style="text-align:center;">
-            <h2 class="section-title">Thank You!</h2>
-            <p>Your message has been sent successfully. We'll get back to you as soon as possible.</p>
-            <a href="index.html" class="btn btn-primary" style="margin-top: 2rem;">Back to Home</a>
-        </div>
+      <div class="container centered-container">
+        <h1 class="section-title">Thank You!</h1>
+        <p class="section-intro">Your message has been sent successfully. We appreciate you reaching out and will get back to you as soon as possible.</p>
+        <a href="index.html" class="btn" style="margin-top: 2rem;">Return to Home Page</a>
+      </div>
     </section>
+  </main>
 
-    <footer class="footer" style="background-color: #333; color: #fff; padding: 2rem 0; text-align: center;">
-        <div class="container">
-            <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="copyright-year"></span> Ringler Custom Carpentry. All rights reserved.</p>
+      <p>Willow Spring, NC | (919) 586-5799</p>
+      </div>
+  </footer>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
- any JavaScript functionality here
