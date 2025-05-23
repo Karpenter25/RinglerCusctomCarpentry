@@ -598,3 +598,106 @@ p {
         flex-direction: column; /* Stack image and content vertically */
         text-align: center; /* Center text within modules */
         margin-bottom: 3rem;
+
+/* --- Contact Form Styles --- */
+.contact-section {
+    padding: 60px 0;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-medium);
+    margin: 2em 0;
+}
+
+.contact-section h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+.contact-form {
+    background: var(--light-color);
+    padding: 2.5em 2em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    max-width: 500px;
+    margin: 2em auto;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.3em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9em;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    background: var(--white);
+    color: var(--dark-color);
+    transition: border var(--transition);
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border: 1.5px solid var(--accent-color);
+    outline: none;
+}
+
+/* Button for Contact Form */
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.8em 2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow-light);
+}
+.btn-primary:hover {
+    background: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* --- Footer Styles --- */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 3em;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    box-shadow: var(--box-shadow-light);
+}
+
+footer a {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+footer a:hover {
+    color: var(--white);
+}
+
+/* --- Responsive Adjustments for Contact Form --- */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1em 0.5em;
+    max-width: 100%;
+  }
+}
