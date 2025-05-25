@@ -151,9 +151,108 @@
             <p>Willow Spring, NC | (919) 586-5799</p>
         </div>
     </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
 
-    <script>
-        // Existing JavaScript remains the same
-    </script>
+        // Form validation
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+        
+        function validateForm() {
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                }
+            });
+            
+            // Email validation
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value && !emailRegex.test(email.value)) {
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+
+        // Real-time validation feedback
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = '#27ae60';
+                } else if (this.hasAttribute('required')) {
+                    this.style.borderColor = '#e74c3c';
+                }
+            });
+
+            input.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+        });
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function() {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{3})(\d{3})/, '($1) $2');
+            }
+            this.value = value;
+        });
+
+        // Form submission handling
+        form.addEventListener('submit', function(e) {
+            // Hide previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+
+            if (!validateForm()) {
+                e.preventDefault();
+                errorMessage.textContent = 'Please fill in all required fields correctly.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            // Note: FormSubmit will handle the actual submission
+            // This is just for user feedback
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }, 3000);
+        });
+
+        // Character counter for textarea
+        const messageTextarea = document.getElementById('message');
+        const charCountDiv = document.createElement('div');
+        charCountDiv.style.textAlign = 'right';
+        charCountDiv.style.fontSize = '0.9rem';
+        charCountDiv.style.color = '#666';
+        charCountDiv.style.marginTop = '0.25rem';
+        messageTextarea.parentNode.appendChild(charCountDiv);
+
+        messageTextarea.addEventListener('input', function() {
+            const count = this.value.length;
+            charCountDiv.textContent = `${count} characters`;
+            
+            if (count > 500) {
+                charCountDiv.style.color = '#e74c3c';
+            } else {
+                charCountDiv.style.color = '#666';
+            }
+        });
+    });
+</script>
 </body>
 </html>
