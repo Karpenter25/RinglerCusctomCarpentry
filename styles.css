@@ -175,6 +175,90 @@ body {
     margin-right: auto;
 }
 
+/* Hero specific styles */
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: var(--spacing-md);
+    font-weight: bold;
+}
+
+.hero-tagline {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.9;
+}
+
+/* Hero button override */
+.hero .btn {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: var(--spacing-md) var(--spacing-xxl);
+    font-size: var(--font-size-lg);
+}
+
+.hero .btn:hover {
+    background: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Highlighted text */
+.highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Highlighted offer card */
+.highlighted-offer {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--accent-color);
+    margin-top: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.highlighted-offer strong {
+    color: var(--accent-color);
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    background: var(--primary-color);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    z-index: 99;
+}
+
+.back-to-top:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Add hover effect to nav */
+.nav-link:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Mobile menu open state */
+.nav-menu.open {
+    display: flex;
+}
+
 /* --- SECTION TITLES --- */
 .section-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
