@@ -1,78 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Image Gallery | Ringler Custom Carpentry</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link your main stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ringler Custom Carpentry</title>
+    <meta name="description" content="View our portfolio of custom woodworking projects in Willow Spring, NC. Custom cabinetry, renovations, and outdoor living spaces.">
+    <meta name="author" content="Kevin Ringler">
+    
+    <meta property="og:title" content="Project Gallery - Ringler Custom Carpentry">
+    <meta property="og:description" content="Browse our collection of custom woodworking and carpentry projects. See examples of our craftsmanship and attention to detail.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://ringlercustomcarpentry.com/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FBF39S7');</script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="header">
-    <div class="header-container container">
-      <div class="header-logo-text">Ringler Custom Carpentry</div>
-      <nav>
-        <ul class="nav-menu">
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="service.html">Services</a></li>
-          <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li><a class="nav-link" href="contact.html">Contact</a></li>
-          <li><a class="nav-link active" href="image.html">Images</a></li>
-        </ul>
-      </nav>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FBF39S7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-logo-text" role="banner">Ringler Custom Carpentry</div>
+            <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-bars"></span>
+            </button>
+            <nav aria-label="Main Navigation" id="main-navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Project Gallery</h1>
+                <p>Browse through our completed projects and get inspired</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Gallery items will be added here -->
+                    <div class="gallery-item">
+                        <img src="images/project1.jpg" alt="Custom Kitchen Cabinets" class="gallery-img" loading="lazy">
+                        <div class="gallery-caption">Custom Kitchen Cabinets</div>
+                    </div>
+                    <!-- Add more gallery items as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
-  </header>
 
-  <main>
-    <!-- Index Hero Section (Background Picture Example) -->
-    <section class="hero" style="background-image: url('images/your-background-image.jpg');">
-      <div class="container">
-        <h1 class="hero-title">Welcome to Ringler Custom Carpentry</h1>
-        <p class="hero-tagline">Craftsmanship. Quality. Customization.</p>
-      </div>
-    </section>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="copyright-year"></span> Ringler Custom Carpentry. All rights reserved.</p>
+            <p>Willow Spring, NC | (919) 586-5799</p>
+        </div>
+    </footer>
 
-    <!-- Services Section -->
-    <section class="section">
-      <h2 class="section-title">Our Services</h2>
-      <div class="gallery-grid container">
-        <img src="images/service-cabinetry.jpg" alt="Cabinetry Service">
-        <img src="images/service-renovation.jpg" alt="Renovation Service">
-        <img src="images/service-furniture.jpg" alt="Custom Furniture Service">
-      </div>
-    </section>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-<!-- Portfolio Section -->
-<section class="section">
-  <h2 class="section-title">Portfolio</h2>
-  <div class="gallery-grid container">
-    <img src="images/portfolio-kitchen.jpg" alt="Kitchen Remodel">
-    <img src="images/portfolio-bathroom.jpg" alt="Bathroom Renovation">
-    <img src="images/portfolio-deck.jpg" alt="Outdoor Deck">
-    <!-- Added images -->
-    <img src="images/interior-woodwork.jpg" alt="Custom Interior Woodwork - Closet Doors">
-    <img src="images/barn-construction.jpg" alt="Framed Pole Barn Construction">
-    <img src="images/hardwood-flooring.jpg" alt="Hardwood Flooring Installation">
-  </div>
-</section>
+    <script>
+        // Set current year in footer
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("copyright-year").textContent = new Date().getFullYear();
+        });
 
-    <!-- Contact Section -->
-    <section class="section">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="gallery-grid container">
-        <img src="images/contact-team.jpg" alt="Our Team">
-        <img src="images/contact-workshop.jpg" alt="Workshop">
-        <!-- Add more if desired -->
-      </div>
-    </section>
-  </main>
+        // Back-to-top functionality
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Ringler Custom Carpentry. All rights reserved.</p>
-    </div>
-  </footer>
+        // Toggle menu for mobile
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.getElementById("main-navigation");
+        toggle.addEventListener("click", () => {
+            const expanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", !expanded);
+            nav.classList.toggle("open");
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxCaption = document.getElementById("lightbox-caption");
+        const closeBtn = document.querySelector(".close-btn");
+        const galleryItems = document.querySelectorAll(".gallery-item");
+
+        galleryItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const img = item.querySelector("img");
+                const caption = item.querySelector(".gallery-caption");
+                
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCaption.textContent = caption.textContent;
+                lightbox.style.display = "flex";
+                document.body.style.overflow = "hidden";
+            });
+        });
+
+        closeBtn.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close lightbox with escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
-</html> 
+</html>
