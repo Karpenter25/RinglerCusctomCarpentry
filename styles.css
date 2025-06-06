@@ -645,6 +645,47 @@ body {
     
     body {
         background: white !important;
+        /* Full-page fixed background image for all pages */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+  background: url('Compress_20250525_230159_9498.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #1a2237; /* fallback */
+  overflow: hidden; /* Prevent body scroll, overlay will scroll */
+}
+
+/* Scrollable, centered overlay for main content */
+.page-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Moonlight Drive Blue Metallic with transparency */
+  background: rgba(26, 34, 55, 0.75); /* #1A2237 at 75% opacity */
+  /* For a soft glassy look */
+  backdrop-filter: blur(2.5px);
+}
+
+/* Optional: Style the content wrapper for max width and padding */
+.page-overlay > * {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+        
         color: black !important;
     }
     
