@@ -1,5 +1,3 @@
-
-
 /* --- CSS VARIABLES (Enhanced) --- */
 :root {
     /* COLORS - Unified across all pages */
@@ -9,14 +7,14 @@
     --success-color: #27ae60;      /* Green for success states */
     --warning-color: #f39c12;      /* Orange for warnings */
     --info-color: #3498db;         /* Blue for info */
-    
+
     /* NEUTRALS */
     --light-bg: #f8f9fa;          /* Light background */
     --white: #ffffff;
     --dark-text: #333333;
     --medium-text: #666666;
     --light-text: #999999;
-    
+
     /* SPACING SYSTEM */
     --spacing-xs: 0.25rem;    /* 4px */
     --spacing-sm: 0.5rem;     /* 8px */
@@ -25,7 +23,7 @@
     --spacing-xl: 2rem;       /* 32px */
     --spacing-xxl: 3rem;      /* 48px */
     --spacing-xxxl: 4rem;     /* 64px */
-    
+
     /* TYPOGRAPHY */
     --font-family-primary: 'Arial', sans-serif;
     --font-size-xs: 0.75rem;
@@ -35,13 +33,13 @@
     --font-size-xl: 1.25rem;
     --font-size-xxl: 1.5rem;
     --font-size-xxxl: 2rem;
-    
+
     /* LAYOUT */
     --container-max-width: 1200px;
     --border-radius: 8px;
     --border-radius-sm: 5px;
     --border-radius-lg: 15px;
-    
+
     /* EFFECTS */
     --transition-fast: 0.15s ease;
     --transition-normal: 0.3s ease;
@@ -64,11 +62,46 @@ html {
     scroll-behavior: smooth;
 }
 
+/* --- FULL PAGE BACKGROUND IMAGE --- */
 body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    box-sizing: border-box;
+    background: url('Compress_20250525_230159_9498.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #1a2237; /* fallback */
+    overflow: hidden; /* Prevent body scroll, overlay will scroll */
     font-family: var(--font-family-primary);
     line-height: 1.6;
     color: var(--dark-text);
-    background-color: var(--light-bg);
+}
+
+/* Scrollable, centered overlay for main content */
+.page-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(26, 34, 55, 0.75); /* #1A2237 at 75% opacity */
+    backdrop-filter: blur(2.5px);
+}
+
+/* Optional: Style the content wrapper for max width and padding */
+.page-overlay > * {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
 /* --- LAYOUT UTILITIES --- */
@@ -555,11 +588,11 @@ body {
     .header-container {
         flex-wrap: wrap;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     .nav-menu {
         display: none;
         width: 100%;
@@ -567,29 +600,29 @@ body {
         gap: 0;
         margin-top: var(--spacing-md);
     }
-    
+
     .nav-menu.active {
         display: flex;
     }
-    
+
     .nav-link {
         display: block;
         padding: var(--spacing-md);
         border-bottom: 1px solid var(--secondary-color);
     }
-    
+
     .hero {
         padding: var(--spacing-xl) 0;
     }
-    
+
     .section {
         padding: var(--spacing-xl) 0;
     }
-    
+
     .container {
         padding: 0 var(--spacing-md);
     }
-    
+
     .grid {
         gap: var(--spacing-md);
     }
@@ -599,12 +632,12 @@ body {
     .container {
         padding: 0 var(--spacing-sm);
     }
-    
+
     .btn {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-sm);
     }
-    
+
     .card {
         padding: var(--spacing-md);
     }
@@ -642,57 +675,14 @@ body {
     .lightbox {
         display: none !important;
     }
-    
+
     body {
         background: white !important;
-        /* Full-page fixed background image for all pages */
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  min-width: 100vw;
-  box-sizing: border-box;
-  background: url('Compress_20250525_230159_9498.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-color: #1a2237; /* fallback */
-  overflow: hidden; /* Prevent body scroll, overlay will scroll */
-}
-
-/* Scrollable, centered overlay for main content */
-.page-overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  min-width: 100vw;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  /* Moonlight Drive Blue Metallic with transparency */
-  background: rgba(26, 34, 55, 0.75); /* #1A2237 at 75% opacity */
-  /* For a soft glassy look */
-  backdrop-filter: blur(2.5px);
-}
-
-/* Optional: Style the content wrapper for max width and padding */
-.page-overlay > * {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-}
-        
         color: black !important;
     }
-    
+
     .card {
         box-shadow: none !important;
         border: 1px solid #ccc;
     }
-}
-```
-
+    }
